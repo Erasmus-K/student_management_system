@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="header">
+    <h1>Welcome to Student Management System</h1>
+    <p>Manage your educational institution efficiently with our comprehensive dashboard</p>
+</div>
+
+<div class="dashboard-grid">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon finance-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Finance Module</h3>
+            </div>
+        </div>
+        <p>Manage fee structures and financial records for all courses and students.</p>
+        <div class="card-actions">
+            <a href="/add-fee" class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Add Fee Structure
+            </a>
+            <a href="/view-fees" class="btn btn-secondary">
+                <i class="fas fa-eye"></i>
+                View All Fees
+            </a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon attendance-icon">
+                <i class="fas fa-user-check"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Attendance Module</h3>
+            </div>
+        </div>
+        <p>Track and manage student attendance records for all classes and sessions.</p>
+        <div class="card-actions">
+            <a href="/record-attendance" class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+                Record Attendance
+            </a>
+            <a href="/view-attendance" class="btn btn-secondary">
+                <i class="fas fa-calendar-alt"></i>
+                View Records
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2 class="section-title">Quick Stats</h2>
+    <div class="dashboard-grid">
+        <div class="card">
+            <h4>Total Fee Structures</h4>
+            <p style="font-size: 2rem; color: #667eea; font-weight: bold;">{{ fee_count or 0 }}</p>
+        </div>
+        <div class="card">
+            <h4>Attendance Records</h4>
+            <p style="font-size: 2rem; color: #f5576c; font-weight: bold;">{{ attendance_count or 0 }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

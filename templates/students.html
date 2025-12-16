@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Students - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-users"></i> Student Management</h1>
+    <p>View and manage all registered students</p>
+</div>
+
+<div class="content-section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 class="section-title" style="margin: 0;">All Students</h2>
+    </div>
+    
+    {% if students %}
+    <table>
+        <thead>
+            <tr>
+                <th><i class="fas fa-hashtag"></i> ID</th>
+                <th><i class="fas fa-user"></i> Name</th>
+                <th><i class="fas fa-envelope"></i> Email</th>
+                <th><i class="fas fa-book"></i> Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student[0] }}</td>
+                <td>{{ student[1] }}</td>
+                <td>{{ student[2] }}</td>
+                <td>{{ student[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div style="text-align: center; padding: 40px; color: #666;">
+        <i class="fas fa-user-slash" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.5;"></i>
+        <h3>No students found</h3>
+        <p>No students are registered in the system</p>
+    </div>
+    {% endif %}
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+{% endblock %}

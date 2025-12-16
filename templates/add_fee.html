@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Add Fee Structure - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-plus-circle"></i> Add Fee Structure</h1>
+    <p>Create new fee structures for courses</p>
+</div>
+
+<div class="content-section">
+    <form method="post">
+        <div class="form-group">
+            <label for="course"><i class="fas fa-book"></i> Course Name</label>
+            <input type="text" id="course" name="course" placeholder="Enter course name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="amount"><i class="fas fa-dollar-sign"></i> Fee Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter fee amount" step="0.01" required>
+        </div>
+        
+        <input type="submit" value="Add Fee Structure">
+    </form>
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+{% endblock %}

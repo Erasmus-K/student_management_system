@@ -101,5 +101,36 @@ def students():
     conn.close()
     return render_template("students.html", students=students)
 
+# Exam Analysis Module
+@app.route("/exam-analysis")
+def exam_analysis():
+    return render_template("exam_analysis.html")
+
+# Bulk SMS Module
+@app.route("/bulk-sms", methods=["GET", "POST"])
+def bulk_sms():
+    if request.method == "POST":
+        # SMS sending logic would go here
+        return redirect("/bulk-sms")
+    return render_template("bulk_sms.html")
+
+# Teacher Resources Module
+@app.route("/teacher-resources")
+def teacher_resources():
+    return render_template("teacher_resources.html")
+
+# Exam Generator Module
+@app.route("/exam-generator", methods=["GET", "POST"])
+def exam_generator():
+    if request.method == "POST":
+        # Exam generation logic would go here
+        return redirect("/exam-generator")
+    return render_template("exam_generator.html")
+
+# Timetable Module
+@app.route("/timetable")
+def timetable():
+    return render_template("timetable.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

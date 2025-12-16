@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Bulk SMS - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-sms"></i> Bulk SMS</h1>
+    <p>Reach parents, students, and staff instantly through our SMS gateway</p>
+</div>
+
+<div class="content-section">
+    <form method="post">
+        <div class="form-group">
+            <label for="recipient_type"><i class="fas fa-users"></i> Send To</label>
+            <select id="recipient_type" name="recipient_type" required>
+                <option value="">Select recipient group</option>
+                <option value="students">All Students</option>
+                <option value="parents">All Parents</option>
+                <option value="teachers">All Teachers</option>
+                <option value="custom">Custom List</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="message"><i class="fas fa-comment"></i> Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required style="width: 100%; padding: 12px; border: 2px solid #e1e5e9; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
+            <small style="color: #666;">Character count: <span id="charCount">0</span>/160</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="schedule"><i class="fas fa-clock"></i> Schedule</label>
+            <select id="schedule" name="schedule">
+                <option value="now">Send Now</option>
+                <option value="later">Schedule for Later</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Send SMS">
+    </form>
+    
+    <div style="background: white; padding: 25px; border-radius: 12px; margin-top: 30px;">
+        <h3>Recent SMS History</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Recipients</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-01-15</td>
+                    <td>All Parents</td>
+                    <td>Parent-Teacher meeting scheduled for...</td>
+                    <td><span style="color: #28a745;">✓ Sent</span></td>
+                </tr>
+                <tr>
+                    <td>2024-01-14</td>
+                    <td>All Students</td>
+                    <td>Exam schedule has been updated...</td>
+                    <td><span style="color: #28a745;">✓ Sent</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+
+<script>
+document.getElementById('message').addEventListener('input', function() {
+    document.getElementById('charCount').textContent = this.value.length;
+});
+</script>
+{% endblock %}

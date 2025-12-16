@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Teacher Resources Hub - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-chalkboard-teacher"></i> Teacher Resources Hub</h1>
+    <p>Access teaching aids, lesson plans, and interactive resources in one place</p>
+</div>
+
+<div class="dashboard-grid">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Lesson Plans</h3>
+            </div>
+        </div>
+        <p>Ready-to-use lesson plans for all subjects and grade levels.</p>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Browse Plans
+            </a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Interactive Content</h3>
+            </div>
+        </div>
+        <p>Videos, animations, and interactive learning materials.</p>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-play"></i>
+                View Content
+            </a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Assessment Tools</h3>
+            </div>
+        </div>
+        <p>Quizzes, worksheets, and evaluation rubrics.</p>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-tasks"></i>
+                Access Tools
+            </a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                <i class="fas fa-users"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Collaboration</h3>
+            </div>
+        </div>
+        <p>Share resources and collaborate with other teachers.</p>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-share-alt"></i>
+                Join Community
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2 class="section-title">Recent Resources</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Resource Name</th>
+                <th>Subject</th>
+                <th>Grade Level</th>
+                <th>Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Introduction to Algebra</td>
+                <td>Mathematics</td>
+                <td>Grade 8</td>
+                <td>Lesson Plan</td>
+                <td><a href="#" class="btn btn-primary" style="padding: 5px 10px; font-size: 0.8rem;">Download</a></td>
+            </tr>
+            <tr>
+                <td>Photosynthesis Animation</td>
+                <td>Biology</td>
+                <td>Grade 10</td>
+                <td>Interactive</td>
+                <td><a href="#" class="btn btn-primary" style="padding: 5px 10px; font-size: 0.8rem;">View</a></td>
+            </tr>
+            <tr>
+                <td>Grammar Quiz Pack</td>
+                <td>English</td>
+                <td>Grade 7</td>
+                <td>Assessment</td>
+                <td><a href="#" class="btn btn-primary" style="padding: 5px 10px; font-size: 0.8rem;">Download</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+{% endblock %}

@@ -52,6 +52,36 @@
                             Manage Students
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/exam-analysis" class="nav-link {% if request.endpoint == 'exam_analysis' %}active{% endif %}">
+                            <i class="nav-icon fas fa-chart-bar"></i>
+                            Exam Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/bulk-sms" class="nav-link {% if request.endpoint == 'bulk_sms' %}active{% endif %}">
+                            <i class="nav-icon fas fa-sms"></i>
+                            Bulk SMS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/teacher-resources" class="nav-link {% if request.endpoint == 'teacher_resources' %}active{% endif %}">
+                            <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                            Teacher Hub
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/exam-generator" class="nav-link {% if request.endpoint == 'exam_generator' %}active{% endif %}">
+                            <i class="nav-icon fas fa-file-alt"></i>
+                            Exam Generator
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/timetable" class="nav-link {% if request.endpoint == 'timetable' %}active{% endif %}">
+                            <i class="nav-icon fas fa-calendar-alt"></i>
+                            Timetable
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </aside>

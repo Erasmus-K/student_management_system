@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Timetable Software - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-calendar-alt"></i> Timetable Software</h1>
+    <p>Auto-generate class timetables with room and teacher allocations</p>
+</div>
+
+<div class="dashboard-grid">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                <i class="fas fa-plus-circle"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Create New Timetable</h3>
+            </div>
+        </div>
+        <p>Generate a new timetable for the current semester.</p>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-magic"></i>
+                Auto Generate
+            </a>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                <i class="fas fa-edit"></i>
+            </div>
+            <div>
+                <h3 class="card-title">Manage Existing</h3>
+            </div>
+        </div>
+        <p>Edit and modify current timetables.</p>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-cog"></i>
+                Manage
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="content-section">
+    <h2 class="section-title">Current Week Timetable - Grade 10A</h2>
+    
+    <div style="overflow-x: auto;">
+        <table style="min-width: 800px;">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>8:00 - 9:00</strong></td>
+                    <td>Mathematics<br><small>Room 101 - Mr. Smith</small></td>
+                    <td>Physics<br><small>Room 201 - Dr. Johnson</small></td>
+                    <td>Chemistry<br><small>Lab 1 - Ms. Davis</small></td>
+                    <td>English<br><small>Room 105 - Mrs. Brown</small></td>
+                    <td>Biology<br><small>Lab 2 - Dr. Wilson</small></td>
+                </tr>
+                <tr>
+                    <td><strong>9:00 - 10:00</strong></td>
+                    <td>Physics<br><small>Room 201 - Dr. Johnson</small></td>
+                    <td>Mathematics<br><small>Room 101 - Mr. Smith</small></td>
+                    <td>English<br><small>Room 105 - Mrs. Brown</small></td>
+                    <td>Biology<br><small>Lab 2 - Dr. Wilson</small></td>
+                    <td>Chemistry<br><small>Lab 1 - Ms. Davis</small></td>
+                </tr>
+                <tr style="background-color: #f8f9fa;">
+                    <td><strong>10:00 - 10:15</strong></td>
+                    <td colspan="5" style="text-align: center; font-style: italic;">Break</td>
+                </tr>
+                <tr>
+                    <td><strong>10:15 - 11:15</strong></td>
+                    <td>Chemistry<br><small>Lab 1 - Ms. Davis</small></td>
+                    <td>Biology<br><small>Lab 2 - Dr. Wilson</small></td>
+                    <td>Mathematics<br><small>Room 101 - Mr. Smith</small></td>
+                    <td>Physics<br><small>Room 201 - Dr. Johnson</small></td>
+                    <td>English<br><small>Room 105 - Mrs. Brown</small></td>
+                </tr>
+                <tr>
+                    <td><strong>11:15 - 12:15</strong></td>
+                    <td>English<br><small>Room 105 - Mrs. Brown</small></td>
+                    <td>Chemistry<br><small>Lab 1 - Ms. Davis</small></td>
+                    <td>Physics<br><small>Room 201 - Dr. Johnson</small></td>
+                    <td>Mathematics<br><small>Room 101 - Mr. Smith</small></td>
+                    <td>Biology<br><small>Lab 2 - Dr. Wilson</small></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <h3>Timetable Actions</h3>
+        <div class="card-actions">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Export PDF
+            </a>
+            <a href="#" class="btn btn-secondary">
+                <i class="fas fa-print"></i>
+                Print Timetable
+            </a>
+            <a href="#" class="btn btn-secondary">
+                <i class="fas fa-share"></i>
+                Share with Teachers
+            </a>
+        </div>
+    </div>
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+{% endblock %}

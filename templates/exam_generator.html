@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Exam Generator - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-file-alt"></i> Exam Generator</h1>
+    <p>Create exams from question banks and export printable versions instantly</p>
+</div>
+
+<div class="content-section">
+    <form method="post">
+        <div class="form-group">
+            <label for="exam_title"><i class="fas fa-heading"></i> Exam Title</label>
+            <input type="text" id="exam_title" name="exam_title" placeholder="Enter exam title" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="subject"><i class="fas fa-book"></i> Subject</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select subject</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="biology">Biology</option>
+                <option value="english">English</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="grade_level"><i class="fas fa-graduation-cap"></i> Grade Level</label>
+            <select id="grade_level" name="grade_level" required>
+                <option value="">Select grade</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+                <option value="11">Grade 11</option>
+                <option value="12">Grade 12</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="duration"><i class="fas fa-clock"></i> Duration (minutes)</label>
+            <input type="number" id="duration" name="duration" placeholder="90" min="30" max="180" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="total_marks"><i class="fas fa-star"></i> Total Marks</label>
+            <input type="number" id="total_marks" name="total_marks" placeholder="100" min="10" max="200" required>
+        </div>
+        
+        <input type="submit" value="Generate Exam">
+    </form>
+    
+    <div style="background: white; padding: 25px; border-radius: 12px; margin-top: 30px;">
+        <h3>Question Bank Statistics</h3>
+        <div class="dashboard-grid">
+            <div class="card">
+                <h4>Mathematics</h4>
+                <p style="font-size: 1.5rem; color: #667eea; font-weight: bold;">245</p>
+                <p>Questions Available</p>
+            </div>
+            <div class="card">
+                <h4>Physics</h4>
+                <p style="font-size: 1.5rem; color: #f5576c; font-weight: bold;">189</p>
+                <p>Questions Available</p>
+            </div>
+            <div class="card">
+                <h4>Chemistry</h4>
+                <p style="font-size: 1.5rem; color: #28a745; font-weight: bold;">167</p>
+                <p>Questions Available</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="background: white; padding: 25px; border-radius: 12px; margin-top: 20px;">
+        <h3>Recent Exams</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exam Title</th>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>Created Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mid-term Mathematics</td>
+                    <td>Mathematics</td>
+                    <td>Grade 10</td>
+                    <td>2024-01-15</td>
+                    <td><a href="#" class="btn btn-primary" style="padding: 5px 10px; font-size: 0.8rem;">Download PDF</a></td>
+                </tr>
+                <tr>
+                    <td>Physics Chapter 5 Test</td>
+                    <td>Physics</td>
+                    <td>Grade 11</td>
+                    <td>2024-01-14</td>
+                    <td><a href="#" class="btn btn-primary" style="padding: 5px 10px; font-size: 0.8rem;">Download PDF</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+{% endblock %}

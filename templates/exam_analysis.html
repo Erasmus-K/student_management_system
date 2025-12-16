@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Exam Analysis - SMS{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1><i class="fas fa-chart-bar"></i> Exam Analysis</h1>
+    <p>Gain insights on student performance with comprehensive exam analytics</p>
+</div>
+
+<div class="content-section">
+    <h2 class="section-title">Performance Analytics</h2>
+    
+    <div class="dashboard-grid">
+        <div class="card">
+            <h4><i class="fas fa-trophy"></i> Top Performers</h4>
+            <div style="text-align: center; padding: 20px;">
+                <p style="font-size: 2rem; color: #28a745; font-weight: bold;">85%</p>
+                <p>Average Score</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4><i class="fas fa-chart-line"></i> Pass Rate</h4>
+            <div style="text-align: center; padding: 20px;">
+                <p style="font-size: 2rem; color: #667eea; font-weight: bold;">92%</p>
+                <p>Students Passed</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h4><i class="fas fa-users"></i> Total Exams</h4>
+            <div style="text-align: center; padding: 20px;">
+                <p style="font-size: 2rem; color: #f5576c; font-weight: bold;">156</p>
+                <p>Conducted This Term</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="background: white; padding: 25px; border-radius: 12px; margin-top: 20px;">
+        <h3>Subject-wise Performance</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Average Score</th>
+                    <th>Pass Rate</th>
+                    <th>Total Students</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>78%</td>
+                    <td>85%</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>82%</td>
+                    <td>90%</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>75%</td>
+                    <td>88%</td>
+                    <td>42</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <a href="/" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        Back to Dashboard
+    </a>
+</div>
+{% endblock %}

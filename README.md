@@ -1,6 +1,6 @@
-# Student Management System
+# Digital Class Attendance Application
 
-A modern web-based Student Management System built with Flask, featuring a beautiful dashboard interface for managing student attendance and fee structures.
+A modern web-based Student Management System built with Flask, featuring a beautiful dashboard interface for real-time attendance tracking, student management, and fee structures. This project demonstrates modern web development practices with responsive design and intuitive user experience.
 
 ## Features
 
@@ -75,7 +75,29 @@ Student-Management/
 ## Technologies Used
 
 - **Backend**: Flask (Python)
-- **Database**: SQLite
+- **Database**: SQLite with foreign key relationships
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Icons**: Font Awesome
-- **Styling**: Custom CSS with gradients and animations
+- **Icons**: Font Awesome (CDN)
+- **Styling**: Custom CSS with gradients, animations, and responsive design
+- **Template Engine**: Jinja2
+- **Version Control**: Git & GitHub
+
+## Project Structure
+
+This project follows MVC (Model-View-Controller) architecture:
+- **Models**: Database schema and connections (`models.py`)
+- **Views**: HTML templates with Jinja2 templating
+- **Controllers**: Flask routes and business logic (`app.py`)
+
+## Key Features Implemented
+
+- **Real-time Data Capture**: Attendance records with timestamps
+- **Dropdown Selections**: User-friendly course and student selection
+- **Modern Dashboard**: Statistics and navigation cards
+- **Responsive Design**: Works on desktop and mobile devices
+- **Database Relationships**: Proper foreign key constraints
+- **Sample Data**: Pre-populated students for testing
+
+## Documentation
+
+For detailed project documentation, setup instructions, and development notes, see [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)
